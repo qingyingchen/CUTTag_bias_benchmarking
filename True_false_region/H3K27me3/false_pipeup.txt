@@ -1,0 +1,10 @@
+### %s means GSMID for H3K27me3
+intersectBed -a /project/zanglab_project/jkx9nz/project/cut/FACTOR/HUMAN/combineReads/sicer/bed/acme3/%s_sicerPeaks_sorted.bed -b /project/zanglab_project/jkx9nz/project/cut/FACTOR/HUMAN/combineReads/sicer/bed/acme3/GSM3536514_K562_WT_CUTTag_H3K27ac_sicerPeaks_sorted.bed >  /project/zanglab_project/jkx9nz/project/cut/FACTOR/HUMAN/combineReads/sicer/overlap/strict_false/%s_H3K27ac.bed
+
+intersectBed -a  /project/zanglab_project/jkx9nz/project/cut/FACTOR/HUMAN/combineReads/sicer/overlap/strict_false/%s_H3K27ac.bed -b /project/zanglab_project/jkx9nz/project/cut/HUMAN/RNA/K562_RNA_8K_ext.bed -u > /project/zanglab_project/jkx9nz/project/cut/FACTOR/HUMAN/combineReads/sicer/overlap/strict_false/%s_H3K27ac_RNA8Kext.bed
+
+rename _H3K27ac_RNA8Kext.bed _false.bed *_H3K27ac_RNA8Kext.bed
+
+
+#merge_false.bed
+cat *_CUTTag_H3K27me3_false.bed | sort -k1,1 -k2,2g -k3,3g | mergeBed -i -> merge_false.bed

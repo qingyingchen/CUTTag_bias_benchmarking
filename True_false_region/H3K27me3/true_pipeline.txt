@@ -1,0 +1,19 @@
+1.Strong true without considering H3K27ac: *_K562_WT_CUTTag_H3K27me3_RNAnone_ext_noacReads.bed
+
+/project/zanglab_project/jkx9nz/project/cut/FACTOR/HUMAN/combineReads/sicer/overlap/strict_true/slurm_true_noac.py:
+
+intersectBed -a /project/zanglab_project/jkx9nz/project/cut/FACTOR/HUMAN/combineReads/sicer/bed/acme3/%s_sicerPeaks_sorted.bed -b /project/zanglab_project/jkx9nz/project/cut/HUMAN/RNA/K562_RNA_none_extend.bed -u > /project/zanglab_project/jkx9nz/project/cut/FACTOR/HUMAN/combineReads/sicer/overlap/strict_true/%s_RNAnone_ext.bed
+
+intersectBed -a /project/zanglab_project/jkx9nz/project/cut/FACTOR/HUMAN/combineReads/sicer/overlap/strict_true/%s_RNAnone_ext.bed -b /project/zanglab_project/jkx9nz/project/cut/FACTOR/HUMAN/combineReads/bed/GSM3536514_K562_WT_CUTTag_H3K27ac_PE.bed -v > /project/zanglab_project/jkx9nz/project/cut/FACTOR/HUMAN/combineReads/sicer/overlap/strict_true/%s_RNAnone_ext_noacReads.bed
+
+2.find intersection of true h3k27me3 from all samples in K562: overlap_true_u.bed
+
+cat *_noacReads.bed | sort -k1,1 -k2,2g -k3,3g > all_ext_noacRet_noacReads.bed
+macs2 pileup -f BEDPE -i all_ext_noacReads.bed -o all_ext_noacReads.bdg
+cat all_ext_noacReads.bdg | awk -F '\t' '{if ($4>10) print $0}' > all_ext_noacReads_10.bdg
+
+#change 199bp bin to 200bp, find the true regions that have more than 13 samples (>=14) piled up at.
+cat ./strict_true/%s_RNAnone_ext_noacReads.bed | awk 'BEGIN {OFS="\t";FS="\t"}{print $1,$2,$3+1,$4}'> ./strict_true/%s_true200.bed
+cat *_true200.bed | sort -k1,1 -k2,2g -k3,3g > all_true.bed
+macs2 pileup -f BEDPE -i all_true.bed -o all_true.bdg
+cat all_true.bdg | awk -F '\t' '{if ($4>13) print $0}' > true200_standard.bdg
