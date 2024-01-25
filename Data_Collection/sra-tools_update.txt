@@ -1,0 +1,8 @@
+### sra-tools developed a new tool: fasterq-dump. The fasterq-dump-tool performs a split-3 operation by default. The fasterq-dump-tool is not identical to the former fastq-dump-tool with regards to command line options. The following is a comparison between fastq-dump and fasterq-dump:
+
+$fastq-dump --split-3 SRRXXXXXXX
+$fasterq-dump SRRXXXXXXX
+
+### These two commands are equivalent.
+### The authors claim that fasterq-dump is faster than fastq-dump. However, based on my personal experience, I have found that fasterq-dump actually performs slower than fastq-dump. Ultimately, the decision on which tool to use is up to you.
+### For more details, see: https://github.com/ncbi/sra-tools/wiki/HowTo:-fasterq-dump and https://github.com/ncbi/sra-tools/wiki/08.-prefetch-and-fasterq-dump#extract-fastq-files-from-sra---accessions
