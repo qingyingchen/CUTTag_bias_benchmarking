@@ -1,13 +1,4 @@
 #!/usr/bin/env python
-'''
-Created on XXXX-XX-XX
-
-@author: Qingying Chen
-'''
-"""
-Description:
-
-"""
 
 # ------------------------------------
 # Python Modual
