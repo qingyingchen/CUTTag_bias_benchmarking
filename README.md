@@ -1,7 +1,6 @@
 # CUTTag_bias_benchmarking<br />
 ## 1. **/Data_Collection<br />**
    *GSM2sra.sh*: a linux shell file to convert GSM identifier to srr identifier, then download .sra files.<br /> 
-   ****
    *fetch_SRA_new.py*: a python file to fetch sra identifier from a known list of GSM identifes.<br />
    *sra2fastq_new.py*: a python file to convert .sra files to .fastq files.<br />
 ## 2. **/Data_Processing<br />**
