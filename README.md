@@ -21,4 +21,16 @@ _**true_pipeline.txt**_: the definition of true regions for H3K27me3. Python + l
 _**false_pipeline.txt**_: the definition of false regions for H3K27me3. Python + linux shell<br />
 ### /H3K27ac<br />
 same as /H3K27me3<br />
+# /CUTTag_Benchmarking<br />
+## /data_quality_check_true_false_regions<br />
+_**slurm_reads_false_me3.py**_: for each CUTTag Reads, located on false regions.<br />
+_**slurm_reads_true_me3.py**_: for each CUTTag Reads, located on true regions.<br />
+_**slurm_reads_other_me3.py**_: for each CUTTag Reads, located neither on true regions nor on false regions.<br />
+_**slurm_true_me3.py**_: for each CUTTag SICER Peaks located on its own CUTTag true region (defined by _**slurm_reads_true_me3.py**_).<br />
+_**slurm_false_me3.py**_: for each CUTTag SICER Peaks located on its own CUTTag false region (defined by _**slurm_reads_false_me3.py**_).<br />
+_**slurm_other_me3.py**_: for each CUTTag SICER Peaks located on its own CUTTag other region (defined by _**slurm_reads_other_me3.py**_).<br />
+_**Reads_per_peak_boxplot.r**_: an R file to draw boxplot of normalized reads distributed on true/dalse/other regions for each CUTTag data.<br />
+## /peakcalling_methods<br />
+
+# /CUTTag_Open_Chromatin_bias<br />
 
