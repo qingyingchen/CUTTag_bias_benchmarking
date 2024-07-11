@@ -23,14 +23,15 @@ _**false_pipeline.txt**_: the definition of false regions for H3K27me3. Python +
 same as /H3K27me3<br />
 # /CUTTag_Benchmarking<br />
 ## /data_quality_check_true_false_regions<br />
-_**slurm_reads_false_me3.py**_: for each CUTTag Reads, located on false regions.<br />
-_**slurm_reads_true_me3.py**_: for each CUTTag Reads, located on true regions.<br />
-_**slurm_reads_other_me3.py**_: for each CUTTag Reads, located neither on true regions nor on false regions.<br />
-_**slurm_true_me3.py**_: for each CUTTag SICER Peaks located on its own CUTTag true region (defined by _**slurm_reads_true_me3.py**_).<br />
-_**slurm_false_me3.py**_: for each CUTTag SICER Peaks located on its own CUTTag false region (defined by _**slurm_reads_false_me3.py**_).<br />
-_**slurm_other_me3.py**_: for each CUTTag SICER Peaks located on its own CUTTag other region (defined by _**slurm_reads_other_me3.py**_).<br />
-_**Reads_per_peak_boxplot.r**_: an R file to draw boxplot of normalized reads distributed on true/dalse/other regions for each CUTTag data.<br />
+_**slurm_true_me3.py**_: for each CUTTag SICER Peaks located on  true region.<br />
+_**slurm_false_me3.py**_: for each CUTTag SICER Peaks located on false region.<br />
+_**slurm_other_me3.py**_: for each CUTTag SICER Peaks located neither on true regions nor on false regions.<br /> 
+_**slurm_reads_true_me3.py**_: for each CUTTag Reads, located on its **own** true regions (defined by _**slurm_true_me3.py**_).<br />
+_**slurm_reads_false_me3.py**_: for each CUTTag Reads, located on its **own** false regions (defined by _**slurm_true_me3.py**_).<br />
+_**slurm_reads_other_me3.py**_: for each CUTTag Reads, located on its **own** other region(defined by _**slurm_true_me3.py**_).<br />
+_**Reads_per_peak_boxplot.r**_: an R file to draw boxplot of normalized reads distributed on its **own** true/dalse/other regions for each CUTTag data.<br />
 ## /peakcalling_methods<br />
-
+For each method (MACS2, SEACR stringent, SEACR relaxed, GoPeaks, MUSIC, RSEG, RSEG deadzone), a python file to run the peakcaller with different cutoffs.
+## 
 # /CUTTag_Open_Chromatin_bias<br />
 
