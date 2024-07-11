@@ -17,4 +17,8 @@
    _**gene_nonexpression.R**_: an R file to get the bottom 8032 expressed genes (not expressed).<br />
 ## /True_false_region<br />
 ### /H3K27me3<br />
-_**true_pipeline.txt**_: the definition of true regions for H3K27me3
+_**true_pipeline.txt**_: the definition of true regions for H3K27me3. Python + linux shell<br />
+_**false_pipeline.txt**_: the definition of false regions for H3K27me3. Python + linux shell<br />
+### /H3K27ac<br />
+same as /H3K27me3<br />
+
