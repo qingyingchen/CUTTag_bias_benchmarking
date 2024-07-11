@@ -1,15 +1,6 @@
-#path1 <- "/project/zanglab_project/jkx9nz/project/cut/FACTOR/HUMAN/combineReads/bed/acme3/"
-#path1 <- "/project/zanglab_project/jkx9nz/project/cut/FACTOR/HUMAN/combineReads/sicer/bed/acme3/"
+
 path1 <- "/project/zanglab_project/jkx9nz/project/cut/FACTOR/HUMAN/combineReads/strict_regions/old/"
 path2 <- "/project/zanglab_project/jkx9nz/project/cut/FACTOR/HUMAN/combineReads/strict_regions/old/plots/"
-#path1 <- "/standard/vol190/zanglab/jkx9nz/project/CUTTag_benchmarking/strict_regions/"
-#path2 <- "/standard/vol190/zanglab/jkx9nz/project/CUTTag_benchmarking/strict_regions/plots/"
-
-#CUTTags = c("GSM3536507","GSM3536508","GSM3536509","GSM3536510","GSM3536511","GSM3536512","GSM3536513",
-#            "GSM3536515","GSM3560261","GSM3680215","GSM3680216","GSM3680217","GSM3680218","GSM3680219",
-#            "GSM3680220","GSM3680221","GSM3680222","GSM4797827","GSM4797828","GSM4797849","GSM4797850",
-#            "GSM4797851","GSM4797852","GSM4797853","GSM4797854","GSM4797856","GSM4797857","GSM4797859",
-#            "GSM4797860")
 
 CUTTags = c("GSM3536507","GSM3536508","GSM3536509","GSM3536510","GSM3536511","GSM3536512","GSM3536513",
             "GSM3536515","GSM3560261","GSM3680215","GSM3680216","GSM3680217","GSM3680218","GSM3680219",
