@@ -36,6 +36,6 @@ _**peaks_overlap_true_false_region.py**_: a Python file to produce peaks (called
 ## auc_measure_result<br />
 _**auc_all_combine_measure_new.r**_: an R file to calculate auROC score/rank, auPRC score/rank and AUCmean rank by adjusting cutoffs for all selected methods. <br />
 ## auc_benchmarking_plot<br />
-R files tp draw boxplots comparing the AUCmean rank between different methods.<br />
+R files to draw boxplots comparing the AUCmean rank between different methods.<br />
 # CUTTag_Open_Chromatin_bias<br />
 
