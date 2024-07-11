@@ -32,10 +32,11 @@ _**slurm_reads_false_me3.py**_: for each CUTTag Reads, located on its **own** fa
 _**slurm_reads_other_me3.py**_: for each CUTTag Reads, located on its **own** other region(defined by _**slurm_true_me3.py**_).<br />
 _**Reads_per_peak_boxplot.r**_: an R file to draw boxplot of normalized reads distributed on its **own** true/dalse/other regions for each CUTTag data.<br />
 ## /peakcalling_methods<br />
-For each method (MACS2, SEACR stringent, SEACR relaxed, GoPeaks, MUSIC, RSEG, RSEG deadzone), a python file to run the peakcaller with different cutoffs.<br />
-## auc_measure_result<br />
-
-_**auc_all_combine_measure_new.r**_: an R file to calculate AUCmeanrank <br />
-
+**_slurm_*.py_**.: for each method (MACS2, SEACR stringent, SEACR relaxed, GoPeaks, MUSIC, RSEG, RSEG deadzone), a python file to run the peakcaller with different cutoffs.<br />
+_**peaks_overlap_true_false_region.py**_: a Python file to produce peaks (called by different methods from last steps) that located on true and false regions.
+## /auc_measure_result<br />
+_**auc_all_combine_measure_new.r**_: an R file to calculate auROC score/rank, auPRC score/rank and AUCmean rank by adjusting cutoffs for all selected methods. <br />
+## /auc_benchmarking_plot<br />
+R files tp draw boxplots comparing the AUCmean rank between different methods.<br />
 # /CUTTag_Open_Chromatin_bias<br />
 
